@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Solid:wght@300&display=swap');
+
+        </style>
+        </head>
+
+
+    <body style="background-color:#ffffff;">
+        <section class="headline">
+            <div class="logopromo">
+                <div class="logo"><a href="aboutus" aria-label="aboutus"><img alt="logo_image" src="images/logo.png"></a></div>
+               
+                <div class="minimenu">
+                    <ul>
+                    <li class="loginButton"><a href="/login">LOGIN</a></li>
+                    <li class="logout"><a href="/logout">LOGOUT</a></li>
+                    <li class="registerButton"><a href="/register">REGISTER</a></li>
+                    </ul>
+                </div>
+        
+            </div>   
+         </section>
+
+        <nav class="choice-bar-">
+            <ul>
+                <li class="bar-menu"><a href="/aboutus">About Us</a></li>
+                <li class="bar-menu"><a href="/menu">  Menu</a></li> 
+                <li class="bar-menu"><a href="/restaurant">Our restaurant</a></li>
+                <li class="bar-menu"><a href="/contact" style="font-weight: bold;">Contact us</a></li>
+            </ul>    
+        </nav>
+
+
+
+        
+        <main class="grid">
+            <div class="timetable">
+                <h2>Ωράριο:</h2>
+                <ul>
+                    <li class="day">Δευτέρα: 9:00 - 24:00</li>
+                    <li class="day">Τρίτη: 9:00 - 24:00 </li>
+                    <li class="day">Τετάρτη: 9:00 - 24:00</li>
+                    <li class="day">Πέμπτη: 9:00 - 24:00</li>
+                    <li class="day">Παρασκευή: 9:00 - 24:00</li>
+                    <li class="day">Σάββατο: 12:00 - 24:00</li>
+                    <li class="day">Κυριακή: Κλειστά</li>
+                </ul>
+            </div>
+
+            <div class="contactus">
+                <form action="action_page.php">
+              
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="mail">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your email..">
+              
+
+
+              
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                  <input type="submit" value="Submit">
+              
+                </form>
+              </div>
+            
+        </main>
+        <div class="footer">
+            <div class="cont-addr-hours">Πλατεία Γεωργίου A &nbsp;&nbsp;&nbsp; 6910010010</div>
+            <div class="copyrightfordetails">Copyright</div>
+        </div>
+
+
+
+       
+        
+        
+
+    </body>
+</html>

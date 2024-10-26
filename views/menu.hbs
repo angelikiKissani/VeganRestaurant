@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Solid:wght@300&display=swap');
+
+        </style>
+        </head>
+
+
+    <body style="background-color:#ffffff;">
+        <section class="headline">
+            <div class="logopromo">
+                <div class="logo"><a href="aboutus" aria-label="aboutus"><img alt="logo_image" src="images/logo.png"></a></div>
+                
+                <div class="minimenu">
+                    <ul>
+                    <li class="loginButton"><a href="/login">LOGIN</a></li>
+                    <li class="logout"><a href="/logout">LOGOUT</a></li>
+                    <li class="registerButton"><a href="/register">REGISTER</a></li>
+                    </ul>
+                </div>
+        
+            </div>   
+         </section>
+
+        <nav class="choice-bar">
+            <ul>
+                <li class="bar-menu"><a href="/aboutus">About Us</a></li>
+                <li class="bar-menu"><a href="/menu" style="font-weight: bold;">  Menu</a></li> 
+                <li class="bar-menu"><a href="/restaurant">Our restaurant</a></li>
+                <li class="bar-menu"><a href="/contact">Contact us</a></li>
+            </ul>    
+        </nav>
+
+        <main class="grid">
+            <div class="sidemenu">
+                <ul>
+                    <li class="menu" id="sides"><a href="menu" style="color: #f2c5b7; font-weight: bold;">Sides</a></li>
+                    <li class="menu" id="salads"><a href="salads">Salads</a></li>
+                    <li class="menu" id="maindishes"><a href="maindish">Main Dishes</a></li>
+                    <li class="menu" id="deserts"><a href="dessert">Desserts</a></li>
+                    <li class="menu" id="drinks"><a href="drink">Beverages</a></li>
+                    <li class="menu" id="wines"><a href="wine">Wine</a></li>
+                    
+                </ul>  
+                
+            </div>
+            <div class="products">
+                
+                <div class="productsContainer" id="1">
+                    <div class="dishContainer">
+                        <h1>Nachos</h1>
+                        <img class="img" alt src="images/nachos.png" >
+                        <p> Με μαύρα φασόλια, σάλτσα, guacamole, κόκκινο κρεμμύδι, jalapeños και κόλιαντρο.</p>
+                        <label>5.00€</label>
+                    </div>
+                    <div class="pricebar">
+                        <div class="quantity">
+                            <button onclick="minusButton(this)" class="minus">-</button>
+                            <label><input type="number" value="0" min="0"></label>
+                            <button onclick="plusButton(this)" class="plus">+</button>
+                            
+                            
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                <div class="productsContainer" id="2">
+                    <div class="dishContainer" name="Vegetable curry">
+                        <h1>Vegetable curry </h1>
+                        <img class="img" alt src="images/vegetablescurry.png" >
+                        <p> Με μελιτζάνα, κολοκύθι, σπανακι, αρακάς, red chilli και κόλιαντρο.</p>
+                        <label>5.00€</label>
+                        <br>
+    
+                    </div>
+                    <div class="pricebar">
+                        <div class="quantity">
+                            <button onclick="minusButton(this)" class="minus">-</button>
+                            <label><input type="number" value="0" min="0"></label>
+                            <button onclick="plusButton(this)" class="plus">+</button>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="productsContainer" id="3">
+                    <div class="dishContainer">
+                        <h1>Veggie Dumplings </h1>
+
+                        <img class="img" alt src="images/dumplings.png" >
+                        <p> Με λάχανο,  μανιτάρια, καρότο, κρεμμύδι τζίντζερ και σως σόγιας.</p>
+                        <label>5.00€</label>
+                        <br>
+                    </div>
+                    <div class="pricebar">
+                        <div class="quantity">
+                            <button onclick="minusButton(this)" class="minus">-</button>
+                            <label><input type="number" value="0" min="0"></label>
+                            <button onclick="plusButton(this)" class="plus">+</button>
+                              
+                        </div>
+                    </div>
+                </div>
+                
+            
+
+            </div>
+            <div class="myOrder">
+                <br>
+                <br>
+                <br>
+                <form id="shopping-cart" >
+                    <table class="shopping-cart">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="padding-right: 15px;">Item</th>
+                                <th scope="col"style="padding-right:10px;">Qty</th>
+                                <th scope="col">Price</th>
+                                <th class="fa fa-trash-o"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    
+                </form>
+                <p id="sub-total">
+                    <strong>Total</strong>: <span id="stotal" style="color:#276955"></span>
+                </p>
+                
+                <a href="checkout" id="checkout" class="btn">Go To Checkout</a>
+                <ul id="shopping-cart-actions">
+                    <!-- <li>
+                        <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart"/>
+                    </li> -->
+                    <li>
+                        <input id="empty-cart" class="btn" onclick="emptyCart()" value="Empty Cart" />
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+        </main>
+        <div class="footer">
+            <div class="cont-addr-hours">Πλατεία Γεωργίου A &nbsp;&nbsp;&nbsp; 6910010010</div>
+            <div class="copyrightfordetails">Copyright</div>
+        </div>
+
+
+        <script src="script.js"></script>       
+        
+        
+
+    </body>
+</html>
