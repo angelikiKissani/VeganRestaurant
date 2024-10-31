@@ -133,6 +133,9 @@ app.get('/login', (req, res) =>  {
   console.log("GET /login session=", req.session);
     res.render("login");
 });
+
+
+
 //LOGIN
 app.post('/auth', function(req, res) {
   
@@ -224,7 +227,13 @@ app.get("/checkout", (req, res) => {
 
 app.post('/submitOrder', function (req, res) {
   try {
-    console.log("GET /sumbitOrder session=", req.session);
+    let name= req.body.name;
+    let email= req.body.email;
+    let zip= req.body.zip;
+    let address= req.body.address;
+    let notes= req.body.notes;
+    console.log(name,address,zip,email,notes)
+
     res.render("menu");
   } catch (error) {
       console.error(error);

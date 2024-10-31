@@ -59,7 +59,7 @@
                     <li class="menu" id="deserts"><a href="dessert" style="color: #f2c5b7; font-weight: bold;">Desserts</a></li>
                     <li class="menu" id="drinks"><a href="drink">Beverages</a></li>
                     <li class="menu" id="wines"><a href="wine">Wine</a></li>
-                    <li class="menu" id="photo"></li>
+                    {{!-- <li class="menu" id="photo"></li> --}}
                 </ul>  
                 
             </div>
@@ -68,10 +68,8 @@
                     <div class="dishContainer">
                         <h1>Carrot Cupcake</h1>
                         <img class="img" alt src="images/cupcake.png" >
-                        <br><br>
                         <p> Vegan Carrot Cupcake</p>
                         <label>5.00€</label>
-                        <br>
                     </div>
                     <div class="pricebar">
                         <div class="quantity">
@@ -88,15 +86,12 @@
                         <img class="img" alt src="images/cupcake.png" >
                         <p> Vegan Cupcake με προτοκάλι</p>
                         <label>5.00€</label>
-                        <br>
                     </div>
                     <div class="pricebar">
                         <div class="quantity">
                             <button onclick="minusButton(this)" class="minus">-</button>
                             <label><input type="number" value="0" min="0"></label>
-                            <button onclick="plusButton(this)" class="plus">+</button>
-                            
-                            
+                            <button onclick="plusButton(this)" class="plus">+</button>                        
                         </div>
                     
                     </div>
@@ -123,7 +118,7 @@
                     <div class="dishContainer">
                         <h1>Ice Cream Snickers</h1>
                         <img class="img" alt src="images/icecream.png" >
-                        <br><br>
+                       
                         <p>Vegan παγωτό snickers</p>
                         <label>5.00€</label>
                         <br>
@@ -143,10 +138,9 @@
                     <div class="dishContainer">
                         <h1>Ice Cream Peanut </h1>
                         <img class="img" alt src="images/icecream2.png" >
-                        <br><br>
+                    
                         <p> Vegan παγωτό φυστίκι</p>
                         <label>5.00€</label>
-                        <br>
                     </div>
                     <div class="pricebar">
                         <div class="quantity">
@@ -161,17 +155,14 @@
                 </div>
             </div>
             <div class="myOrder">
-                <br>
-                <br>
-                <br>
                 <form id="shopping-cart" >
                     <table class="shopping-cart">
                         <thead>
                             <tr>
-                                <th scope="col" style="padding-right: 15px;">Item</th>
-                                <th scope="col"style="padding-right:10px;">Qty</th>
-                                <th scope="col">Price</th>
-                                <th class="fa fa-trash-o"></th>
+                               <th scope="col" style="width: 100px;">Item</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col" style="width: 80px;">Price</th>
+                                <th scope="col" class="fa fa-trash-o" style="margin-top:6px;"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -184,7 +175,7 @@
                 </p>
                 
                 <a href="checkout" id="checkout" class="btn">Go To Checkout</a>
-                <ul id="shopping-cart-actions">
+                {{!-- <ul id="shopping-cart-actions">
                     <!-- <li>
                         <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart"/>
                     </li> -->
@@ -192,7 +183,7 @@
                         <input id="empty-cart" class="btn" onclick="emptyCart()" value="Empty Cart" />
                     </li>
                     
-                </ul>
+                </ul> --}}
             </div>
 
             

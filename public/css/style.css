@@ -83,12 +83,10 @@ ul{
     text-decoration: none;
   
 }
-
 .headline .logopromo  .minimenu ul a:hover{
     display: flex; 
     font-weight: bolder;
 }
-
 nav{
     margin: 10px;
     display: flex;
@@ -97,7 +95,6 @@ nav{
     border-radius: 10px;  
   
 }
-
 nav ul{
     display: flex;
     flex-wrap:wrap;
@@ -117,17 +114,11 @@ nav ul a:hover{
     color:rgb(169, 189, 150);
     font-weight: bolder;
 }
-
-
-
 .grid{
     display: grid;
     grid-template-columns: auto auto auto;
    
 }
-  
-  
-
 main .sidemenu{
     float: left;
     height: 12cm;
@@ -141,58 +132,69 @@ main .sidemenu{
     width: 220PX;
 
 }
+
+
 /*MYORDER--------------*/
-main .myOrder{
+.myOrder{
     height: 12cm;
     border-radius: 10px;
-    background-image: url("/images/myOrder.png");
-    background-size: cover;
+    background-color: transparent;
     width: 320px;
-
-    margin-top: 0;
-    margin-right: 0px;
-    margin-left: 5px;
+    border-color: #0e432c;
+    border-width:5px;
+    border-style:solid;
+    margin-left: 10px;
+    padding: 2px;
+    overflow-y: auto;
+    /* justify-content: space-between; */
     
 }
 
-table{
+.myOrder table{
     width: 100%;
     color: #0e432c;
-    font-size: 22px;
-    margin-left: 10px;
-    position: relative;
+    font-size: 25px;
+    table-layout: fixed; 
+    border-collapse: collapse; 
+    /* justify-items: end; */
+    /* position: relative; */
+
    
 }
-tbody{
-    font-size: large;
-    position: relative;
+.myOrder th, .myOrder td {
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allows wrapping */
+
+
 }
 
 
 
-
+.myOrder tbody{
+    font-size: 20px;
+}
 
 #sub-total{
     color: #0e432c;
-    font-size: large;
+    font-size: 22px;
     position:static;
-    margin-left: 20px;
+    margin-left: 15px;
 }
-#shopping-cart-actions{
-    display:flex;
-    flex-direction: column;
-    
+#shopping-cart{
+    min-height: 9cm;
+    margin-left: 10px;
     
 }
-#shopping-cart-actions li{
+
+
+/* #shopping-cart-actions li{
     position:static;
-    margin-left: 140px;
-    margin-top: 10px;
 
 }
 
 #shopping-cart-actions .btn{ 
-    
     border: none;   
     color:#0e432c;  
     font-weight: bolder;
@@ -201,18 +203,15 @@ tbody{
 }
 #shopping-cart-actions .btn:hover{
     color:  #f2c5b7;
-}
+} */
+
 #checkout{
+    display: flex;
     position: static;
-    margin-left: 120px;
     font-size: large;
     font-weight: bolder;
-    background-color: transparent;
-
-    color: #276955;
-    border:none;
-    box-shadow: 4px 5px 2px 2px #0e432c;
-    border-radius: 25px;
+    color: #0e432c;
+    justify-self:flex-end;
 }
 #checkout:hover{
     background-image: url('/images/arrow.png');
@@ -221,15 +220,13 @@ tbody{
     color:transparent
    
 }
-#shopping-cart{
-    min-height: 7.5cm;
-}
 
 .deleteButton{
     height: 30px;
     border: none;
+    right: 0;
     background-color: transparent;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 .deleteButton:hover{
     font-weight: bold;
@@ -266,7 +263,7 @@ main .sidemenu a:hover{
 
 .quantity input{
     width:max-content;
-    color:#ffffff;
+    color:#0e432c;
     background-color:transparent;
     text-align: center;
     border-color: #0e432c;
@@ -276,14 +273,15 @@ main .sidemenu a:hover{
     margin: 10px;  
      
 }
+
 .quantity button{
-    background-color:transparent;
-    color:#a9bd96;
+    background-color:#0e432c;
+    color:#ffffff;
     width: 30px;
     height: 30px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 2px 2px 2px #a9bd96;
+    /* box-shadow: 0px 2px 2px 2px ; */
      
 
 }
@@ -308,8 +306,8 @@ input[type=number]::-webkit-outer-spin-button {
     height: 50px;
     border-radius: none;
     
-}
-#addTocart{
+} 
+ #addTocart{
     
     margin-top: 2px;
     border: none;
@@ -355,14 +353,15 @@ main .products .productsContainer{
     border-radius: 40px;
     text-align: center;
 }
-main .products .productsContainer .dishContainer img{
+.dishContainer img{
     width: 110px;
     /* height: 100;> */
     margin-bottom: 10px;
 }
-main .products .productsContainer .dishContainer {
+.dishContainer {
     
-    position: absolute;
+    position:relative;
+    align-items:last baseline
     /* margin-right: 30px; */
     bottom: 60px;
 }
@@ -370,10 +369,10 @@ main .products .productsContainer .dishContainer {
     font-weight: 600;
     color: #0e432c;
 }
-main .products .productsContainer .pricebar {
+.pricebar {
     position:absolute;
-    margin-left: 22%;
-    bottom: 15px; 
+    margin-left: 20%;
+    bottom: 17px; 
 }
 
 
@@ -615,29 +614,57 @@ main .ordercheckout{
     grid-template-columns: auto auto;
 
 }
-main .checkoutOrderCont{
+
+
+.checkoutOrderCont{
     height: 12cm;
-    background-size: cover;
-    width: 320px;
+    border-radius: 10px;
     margin-top: 60px;
     margin-left: 100px;
     color: #0e432c;
+    width: 320px;
     border:none;
-    padding: 25px;
+    padding: 10px;
     box-shadow: 1px 1px 20px 1px #0e432c;
     
+    padding-left: 15px;
+    overflow-y: auto;
+    /* justify-content: space-between; */
+    
 }
-main .checkoutOrderCont .shopping-cart th{
-    font-size: xx-large;
+.checkoutOrderCont tbody{
+    font-size: 20px;
+}
+
+
+.checkoutOrderCont table{
+    margin-top: 10px;
+    width: 100%;
+    color: #0e432c;
+    font-size: 25px;
+    table-layout: fixed; 
+    border-collapse: collapse; 
+    /* justify-items: end; */
+    /* position: relative; */
+
+   
+}
+.checkoutOrderCont th, .myOrder td {
+    
+    /* padding: 10px; */
+    text-align: left;
+    word-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allows wrapping */
+
 
 }
+
 
 main .checkoutOrderCont .total{
     color: #0e432c;
-    font-size: large;
+    font-size: 22px;
     position:static;
-    margin-right: 180px;
-    margin-top: 100px;
+    margin-left: 15px;
 
 }
 
@@ -649,7 +676,8 @@ main .checkoutOrderCont .total{
 
 .customerInfo{
     height: 12cm;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin-top: 60px;
     margin-left: 100px;
     color: #0e432c;
@@ -660,32 +688,56 @@ main .checkoutOrderCont .total{
 .customerInfo h2{
     text-align: center;
 }
+
 .customerInfo fieldset{
     color: #276955;
     display: grid;
-    grid-template-columns: auto auto ;
-    justify-items:end;
+    grid-template-columns: 1fr 1fr ;
+    gap:10px;
     margin: 20px;
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
 
 }
-
-.customerInfo input[type=text] {
-    
-    margin-bottom: 20px;
-    width: 200px;
-    border: 1px solid transparent;
-    text-align:left;
-    font-size: medium;
-    height: 30px;
-
+#billing-field{
+    margin-top: 40px;
+    justify-items: start;
+    /* width: 100%; */
 }
-
-#country{
-    width: 200px;
+#billing-field div{
+    margin: 2px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 25px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .customerInfo label{
     color: #276955;
+    margin-left: 5px;
 }
+.customerInfo input[type=text],
+.customerInfo select {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 180px;
+    /* text-align:left; */
+    font-size: large;
+    height: 30px;
+    box-sizing: border-box;
+
+}
+
+
+
+
+#country{
+    width: 100%;
+}
+
 
 .customerInfo h5{
     color:#276955;
@@ -710,19 +762,12 @@ main .checkoutOrderCont .total{
 }
 #notes{
     margin-top: -10px;
-    margin-left: 20px;
+    margin-left: 20px;   
     
 }
-input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px;
-    margin-bottom: 0; 
-    resize: vertical 
-}
+
+
+
 
 
 .contactus input[type=submit] {
